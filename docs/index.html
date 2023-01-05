@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Saurabh Dutta</title>
+    <meta name="description" content="Hey! I&#x27;m Saurabh, a full-stack developer, who strives to develop efficient backend solutions and design beautiful &amp;amp; user-friendly user interfaces. This is my home on the web where I post my thoughts and showcase my work and a bit about myself.
+I&#x27;m an avid podcast listener and a horror movie buff. In my free time, I also do like to do some competitive programming.
+I try my hands on a lot of things but I consider myself best at Java &amp;amp; Javascript. For the backend, I mostly use Express framework or Spring framework with git as the version control system. For the frontend, I work best with Angular, also learning React now. For the Database, I like Mongo and PostgreSQL.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap">
+    <style>:root {
+  /* Colors */
+  --primaryColor: #212529;
+  --secondaryColor: #95a5a6;
+  --accentColor: #f1c40f;
+  --linkColor: #2ecc71;
+  --mutedColor: #f4f6f6;
+
+  /* Typography */
+  --ratio: 1.25;
+  --scale0: 1rem;
+  --scale1: calc(var(--scale0) * var(--ratio));
+  --scale2: calc(var(--scale1) * var(--ratio));
+  --scale3: calc(var(--scale2) * var(--ratio));
+  --scale4: calc(var(--scale3) * var(--ratio));
+  --scale5: calc(var(--scale4) * var(--ratio));
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  color: var(--primaryColor);
+  display: grid;
+  font: 1em/1.5 Lato, sans-serif;
+  gap: 2em;
+  grid-template-columns:
+    [full-start]
+    1fr
+    [main-start side-start]
+    minmax(min-content, 12em)
+    [side-end content-start]
+    minmax(min-content, 36em)
+    [main-end content-end]
+    1fr
+    [full-end];
+  grid-template-rows: auto [content] 0;
+  margin-bottom: 4em;
+}
+
+body::before {
+  content: '';
+  grid-column: full;
+  grid-row: content;
+}
+
+ol,
+ul {
+  padding-left: 1em;
+}
+
+li + li {
+  margin-top: 0.2em;
+}
+
+li::marker {
+  color: var(--mutedColor);
+}
+
+a {
+  color: var(--linkColor);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:focus,
+a:hover {
+  color: var(--accentColor);
+}
+
+h1,
+h2,
+h3,
+h5 {
+  font-weight: normal;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: var(--scale5);
+}
+
+h2 {
+  color: var(--secondaryColor);
+  font-size: var(--scale4);
+}
+
+h3 {
+  color: var(--accentColor);
+  font-size: var(--scale3);
+  grid-column: side;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: var(--scale2);
+}
+
+h5 {
+  font-size: var(--scale1);
+}
+
+h6 {
+  font-size: var(--scale0);
+}
+
+blockquote {
+  border-left: 0.2em solid var(--mutedColor);
+  padding-left: 1em;
+}
+
+cite {
+  color: var(--secondaryColor);
+  font-style: inherit;
+}
+
+cite::before {
+  content: '— ';
+}
+
+.masthead {
+  background: var(--mutedColor);
+  display: inherit;
+  gap: inherit;
+  grid-column: full;
+  grid-template-columns: inherit;
+  padding: 4em 0;
+  row-gap: 0;
+}
+
+.masthead > *,
+section {
+  grid-column: main;
+}
+
+article > * + *,
+blockquote > * + * {
+  margin-top: 0.6em;
+}
+
+.stack {
+  display: grid;
+  gap: 1.5em;
+}
+
+.grid-list {
+  display: grid;
+  gap: 1em;
+}
+
+.spaced-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.spaced-list:first-child::before {
+  border-bottom: 1px solid var(--mutedColor);
+  content: '';
+  flex-grow: 1;
+  margin: 0 1em;
+  order: 1;
+}
+
+.spaced-list > :nth-child(2) {
+  order: 2;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+
+.tag-list > li {
+  background: var(--mutedColor);
+  margin: 0 0.2em 0.2em 0;
+  padding: 0.2em 0.6em;
+}
+
+@media print, (min-width: 48em) {
+  h3 {
+    text-align: right;
+    margin-bottom: inherit;
+  }
+
+  .masthead > *,
+  section {
+    grid-column: content;
+  }
+
+  section {
+    display: contents;
+  }
+
+  .grid-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+</style>
+  </head>
+  <body>
+      <header class="masthead">
+          <h1>Saurabh Dutta</h1>
+          <h2>Full Stack Developer</h2>
+      </header>
+      <section id="contact">
+        <h3>Contact</h3>
+        <div class="grid-list">
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:mail@saurabhdutta.dev">mail@saurabhdutta.dev</a>
+            </div>
+            <div>
+              <h4>Phone</h4>
+              +919650897823
+            </div>
+        </div>
+      </section>
+        <section id="about">
+          <h3>About</h3>
+          <article>
+            <p>Hey! I'm Saurabh, a full-stack developer, who strives to develop efficient backend solutions and design beautiful &amp; user-friendly user interfaces. This is my home on the web where I post my thoughts and showcase my work and a bit about myself.
+      I'm an avid podcast listener and a horror movie buff. In my free time, I also do like to do some competitive programming.
+      I try my hands on a lot of things but I consider myself best at Java &amp; Javascript. For the backend, I mostly use Express framework or Spring framework with git as the version control system. For the frontend, I work best with Angular, also learning React now. For the Database, I like Mongo and PostgreSQL.</p>
+          </article>
+        </section>
+        <section id="profiles">
+          <h3>Profiles</h3>
+          <div class="grid-list">
+              <div>
+                  <h4>github</h4>
+                    <a href="https://github.com/saurabh73">saurabh73</a>
+              </div>
+          </div>
+        </section>
+
+      <section id="work">
+        <h3>Work</h3>
+        <div class="stack">
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4></h4>
+                  <span>
+                    <time datetime="2022-04-01">Apr 2022</time> –
+                    Present
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Software Developer</strong>
+                </div>
+              </header>
+                
+                <h5>Highlights</h5>
+                <ul>
+                    <li>Working with InvestCloud A-Tier team to manage their core application server layer used by many clients around the world for ther investment trading platform</li>
+                </ul>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4></h4>
+                  <span>
+                    <time datetime="2016-01-04">Jan 2016</time> –
+                    <time datetime="2022-03-31">Mar 2022</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Technologist</strong>
+                </div>
+              </header>
+                
+                <h5>Highlights</h5>
+                <ul>
+                    <li>Worked to develop the system for Capital One, to avoid being blacklisted by Spamhaus, with analyzing email bounce events.</li>
+                    <li>Involved in development &amp; maintenance of the systems for credit card limit increase opt-ins and card account preferences.</li>
+                    <li>Built a cross-platform mobile App with Ionic for a POC project which tags customers bank transactions.</li>
+                </ul>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4></h4>
+                  <span>
+                    <time datetime="2014-10-01">Oct 2014</time> –
+                    <time datetime="2015-12-31">Dec 2015</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Software Engineer</strong>
+                </div>
+              </header>
+                
+                <h5>Highlights</h5>
+                <ul>
+                    <li>Got hands-on experience on various technologies credits to extensive Instructor-led training program of Infogain. </li>
+                    <li>Responsible for maintenance of NCR&#x27;s monitoring product called VISION, which monitors administer ATMs.</li>
+                </ul>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4></h4>
+                  <span>
+                    <time datetime="2013-05-01">May 2013</time> –
+                    <time datetime="2013-07-01">Jul 2013</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Software Engineer Intern</strong>
+                </div>
+              </header>
+                
+                <h5>Highlights</h5>
+                <ul>
+                    <li>Learned about Software Development Life Cycle.</li>
+                    <li>Written Java based XML Marshaller for MT 101 SWIFT message payment request.</li>
+                </ul>
+            </article>
+        </div>
+      </section>
+      <section id="education">
+        <h3>Education</h3>
+        <div class="stack">
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>University of Allahabad</h4>
+                  <span>
+                    <time datetime="2010-07-01">Jul 2010</time> –
+                    <time datetime="2014-06-30">Jun 2014</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Computer Science &amp; Engineering</strong>
+                </div>
+              </header>
+                <p>B.Tech</p>
+            </article>
+        </div>
+      </section>
+      <section id="projects">
+        <h3>Projects</h3>
+        <div class="stack">
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>Ambuhelp</h4>
+                  <span>
+                    <time datetime="">Invalid Date</time> –
+                    Present
+                  </span>
+                </div>
+                <div class="spaced-list">
+                  <span>
+                      <strong>Full Stack Developer</strong>
+                  </span>
+                </div>
+              </header>
+                <p>AmbuHelp is an attempt to create an emergency alert solution which enables user to get the nearest available ambulance and medical center, and allowing us to notify his/her emergency contacts on a single tap. Won 4th Prize for this hackathon project hosted by Wipro.</p>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>HYDRAE – Digital Messaging System</h4>
+                  <span>
+                    <time datetime="">Invalid Date</time> –
+                    Present
+                  </span>
+                </div>
+                <div class="spaced-list">
+                  <span>
+                      <strong>Backend Developer</strong>
+                  </span>
+                </div>
+              </header>
+                <p>Contributed to development of HYDRAE Digital Messaging System for Capital One, which enables them to  avoid Spamhouse trap based on feedback from email vendors like Sparkpost, Salesforce, etc. and create a  hygienic database system for email endpoints.  Worked on AWS lambda functions for providing file/event- based integration and triggers to the HYDRAE system.</p>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>Gitbot</h4>
+                  <span>
+                    <time datetime="">Invalid Date</time> –
+                    Present
+                  </span>
+                </div>
+                <div class="spaced-list">
+                  <span>
+                      <strong>Chat Bot Developer</strong>
+                  </span>
+                </div>
+              </header>
+                <p>Gitbot, is a slack bot to give basic information about the selected repository in your slack channel, help you fetching your repository code and most importantly commits to your repository with uploaded code in your channel.</p>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>Jainam</h4>
+                  <span>
+                    <time datetime="">Invalid Date</time> –
+                    Present
+                  </span>
+                </div>
+                <div class="spaced-list">
+                  <span>
+                      <strong>Full Stack Developer</strong>
+                  </span>
+                </div>
+              </header>
+                <p>Jainam is a effort in hope to create a digital platform that serves the entire Jain community and makes knowledge sharing an accessible process. I've helped the team to build their REST API backed system, along with monitoring dashboard and housekeeping lambda functions.</p>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>Aquasense</h4>
+                  <span>
+                    <time datetime="">Invalid Date</time> –
+                    Present
+                  </span>
+                </div>
+                <div class="spaced-list">
+                  <span>
+                      <strong>Full Stack Developer</strong>
+                  </span>
+                </div>
+              </header>
+                <p>Aquasense is working towards the way to revolutionize how water resources systems work in the world. I've contributed towards the development of dashboard and API system for their IoT devices, along with gitlab-runner based CI/CD pipeline.</p>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>Train Status: Alexa Skill</h4>
+                  <span>
+                    <time datetime="">Invalid Date</time> –
+                    Present
+                  </span>
+                </div>
+                <div class="spaced-list">
+                  <span>
+                      <strong>Chat Bot Developer</strong>
+                  </span>
+                </div>
+              </header>
+                <p>Alexa skill to get live status of their train by giving railway number as input. Uses AWS lambda function to  invoke action and give an appropriate response.  This BOT is powered By Railway API (https://railwayapi.com/).</p>
+            </article>
+        </div>
+      </section>
+      <section id="awards">
+        <h3>Awards</h3>
+        <div class="stack">
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>Best Junior Engineer</h4>
+                    <time datetime="2015-04-01">Apr 2015</time>
+                </div>
+                <div class="spaced-list">
+                    <div>
+                      Awarded by <strong>Infogain Pvt. Ltd.</strong>
+                    </div>
+                </div>
+              </header>
+                <p>Best Junior Engineer for the quarter Jan-Mar 2015</p>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>Digirupt 3rd Runner Up</h4>
+                    <time datetime="2017-02-01">Feb 2017</time>
+                </div>
+                <div class="spaced-list">
+                    <div>
+                      Awarded by <strong>Wipro Technologies</strong>
+                    </div>
+                </div>
+              </header>
+                <p>Won 4th position in Digirupt 2016, a hackathon conducted by Wipro Digital for project Ambuhelp</p>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>Best Consultant/Technical Expert</h4>
+                    <time datetime="2018-12-01">Dec 2018</time>
+                </div>
+                <div class="spaced-list">
+                    <div>
+                      Awarded by <strong>Wipro Technologies</strong>
+                    </div>
+                </div>
+              </header>
+                <p>Awarded as Best Consultant/Technical Expert for contribution to Capital One client.</p>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>Winner for Topcoder Challenge</h4>
+                    <time datetime="2018-08-01">Aug 2018</time>
+                </div>
+                <div class="spaced-list">
+                    <div>
+                      Awarded by <strong>Wipro Technologies</strong>
+                    </div>
+                </div>
+              </header>
+                <p>Topcoder challenge winner (Wipro Hosted) for pdf to
+    JSON parser for CIOMS forms (Medical Records)</p>
+            </article>
+        </div>
+      </section>
+      <section id="certificates">
+        <h3>Certificates</h3>
+        <div class="stack">
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>CodeChef Certified Foundation Level Exam</h4>
+                    <time datetime="2018-01-21">Jan 2018</time>
+                </div>
+                <div class="spaced-list">
+                    <span>
+                      Issued by <strong>CodeChef</strong>
+                    </span>
+                    <a href="https://res.cloudinary.com/dren4jgbp/image/upload/v1623634325/resume/codechef.pdf">res.cloudinary.com/dren4jgbp/image/upload/v1623634325/resume/codechef.pdf</a>
+                </div>
+              </header>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>AWS Certified Developer - Associate</h4>
+                    <time datetime="2016-12-29">Dec 2016</time>
+                </div>
+                <div class="spaced-list">
+                    <span>
+                      Issued by <strong>Amazon</strong>
+                    </span>
+                    <a href="https://res.cloudinary.com/dren4jgbp/image/upload/v1581549686/resume/AWS_Certified_Developer_-_Associate_certificate.pdf">res.cloudinary.com/dren4jgbp/image/upload/v1581549686/resume/AWS_Certified_Developer_-_Associate_certificate.pdf</a>
+                </div>
+              </header>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>IBM Certified Application Developer - Cloud Platform V1</h4>
+                    <time datetime="2016-06-10">Jun 2016</time>
+                </div>
+                <div class="spaced-list">
+                    <span>
+                      Issued by <strong>IBM</strong>
+                    </span>
+                    <a href="https://www.youracclaim.com/badges/a8c885bb-e3cb-4b7c-932f-6a6408998bbf/linked_in_profile">www.youracclaim.com/badges/a8c885bb-e3cb-4b7c-932f-6a6408998bbf/linked_in_profile</a>
+                </div>
+              </header>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>Microsoft Specialist: Programming in HTML5 with JavaScript and CSS3</h4>
+                    <time datetime="2013-03-04">Mar 2013</time>
+                </div>
+                <div class="spaced-list">
+                    <span>
+                      Issued by <strong>Microsoft</strong>
+                    </span>
+                    <a href="https://res.cloudinary.com/dren4jgbp/image/upload/v1623633993/resume/microsoft-certificate.pdf">res.cloudinary.com/dren4jgbp/image/upload/v1623633993/resume/microsoft-certificate.pdf</a>
+                </div>
+              </header>
+            </article>
+        </div>
+      </section>
+      <section id="skills">
+        <h3>Skills</h3>
+        <div class="grid-list">
+            <div>
+                <h4>Java</h4>
+            </div>
+            <div>
+                <h4>Javascript</h4>
+            </div>
+            <div>
+                <h4>Python</h4>
+            </div>
+            <div>
+                <h4>Go</h4>
+            </div>
+            <div>
+                <h4>Spring</h4>
+            </div>
+            <div>
+                <h4>Node.js</h4>
+            </div>
+            <div>
+                <h4>Express.js</h4>
+            </div>
+            <div>
+                <h4>HTML5</h4>
+            </div>
+            <div>
+                <h4>CSS3</h4>
+            </div>
+            <div>
+                <h4>JQuery</h4>
+            </div>
+            <div>
+                <h4>Angular</h4>
+            </div>
+            <div>
+                <h4>React</h4>
+            </div>
+            <div>
+                <h4>Flutter</h4>
+            </div>
+            <div>
+                <h4>PostgreSql</h4>
+            </div>
+            <div>
+                <h4>MongoDB</h4>
+            </div>
+            <div>
+                <h4>Redis</h4>
+            </div>
+            <div>
+                <h4>AWS</h4>
+            </div>
+            <div>
+                <h4>Digital Ocean</h4>
+            </div>
+            <div>
+                <h4>Heroku</h4>
+            </div>
+            <div>
+                <h4>Docker</h4>
+            </div>
+            <div>
+                <h4>GraphQL</h4>
+            </div>
+            <div>
+                <h4>Gradle</h4>
+            </div>
+            <div>
+                <h4>Webpack</h4>
+            </div>
+            <div>
+                <h4>Typescript</h4>
+            </div>
+        </div>
+      </section>
+      <section id="languages">
+        <h3>Languages</h3>
+        <div class="grid-list">
+            <div>
+                <h4>English</h4>
+              Fluent
+            </div>
+            <div>
+                <h4>Hindi</h4>
+              Fluent
+            </div>
+            <div>
+                <h4>Bengali</h4>
+              Fluent
+            </div>
+        </div>
+      </section>
+      <section id="interests">
+        <h3>Interests</h3>
+        <div class="grid-list">
+            <div>
+                <h4>Podcasts</h4>
+            </div>
+            <div>
+                <h4>Competitive programming</h4>
+            </div>
+            <div>
+                <h4>Listening to music</h4>
+            </div>
+            <div>
+                <h4>Movies &amp; Shows</h4>
+            </div>
+        </div>
+      </section>
+  </body>
+</html>
